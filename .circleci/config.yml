@@ -10,5 +10,4 @@ jobs:
           name: docker check
           command: |
             set -e
-            docker ps
             env
