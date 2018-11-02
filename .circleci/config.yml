@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: docker check
+          command: |
+            set -e
+            docker ps
+            env
